@@ -325,10 +325,12 @@ button {
     text-transform: uppercase;
     font-weight: bold;
 }
+
 .contact_bt a:hover {
     color: #181818;
-    border: 2px solid #ff5a58;
+    border: 2px solid #4aafff;
 }
+
 .services_section {
     width: 100%;
     float: left;

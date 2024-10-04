@@ -5,6 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <!-- mobile metas -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="viewport" content="initial-scale=1, maximum-scale=1">
@@ -23,16 +24,102 @@
 <link rel="icon" href="images/fevicon.png" type="image/gif" />
 <!-- Scrollbar Custom CSS -->
 <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-<!-- Tweaks for older IEs-->
-<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-<!-- owl stylesheets --> 
-<link rel="stylesheet" href="css/owl.carousel.min.css">
-<link rel="stylesheet" href="css/owl.theme.default.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 </head>
+
+ <style>
+  /* Contact Form Container */
+.contact_form_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color:white;
+    padding: 20px;
+}
+
+/* Contact Form Styles */
+.contact_form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Form Title */
+.contact_form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Form Group: Input Fields and Textarea */
+.form_group {
+    margin-bottom: 15px;
+}
+
+.form_group input,
+.form_group textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form_group input:focus,
+.form_group textarea:focus {
+    border-color: #f39c12;
+}
+
+/* Button Styles */
+.form_group button {
+    width: 100%;
+    background-color: #f39c12;
+    color: #fff;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form_group button:hover {
+    background-color: #e67e22;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .contact_form {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact_form h2 {
+        font-size: 20px;
+    }
+
+    .form_group input,
+    .form_group textarea {
+        font-size: 14px;
+    }
+
+    .form_group button {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
+ </style>
 <body>
   <!--header section start -->
-    <div class="header_section header_bg">
+    <div class="header_section">
+      <div class="header_left">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <div class="logo"><a href="index.html"><img src="images/Arthanitix.png"></a></div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,52 +145,39 @@
             </ul>
           </div>
         </nav>
-    </div>
-    <!--header section end -->
-    <!-- contact section start -->
-    <div class="contact_section layout_padding">
-      <div class="container-fluid">
-        <h1 class="what_taital">Contact us</h1>
-        <p class="amet_text">amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore </p>
-        <div class="contact_section2">
-          <div class="row">
-            <div class="col-md-6 padding_left_0">
-              <div class="mail_section">
-    <form action="https://formsubmit.co/18a4014a8040233740e58a5f26805a74" method="POST">
-        <input type="text" class="mail_text_1" placeholder="Name" name="name">
-        <input type="tel" class="mail_text_1" placeholder="Phone Number" name="phone">
-        <input type="email" class="mail_text_1" placeholder="Email" name="email">
-        <textarea class="massage_text" placeholder="Message" rows="5" id="comment" name="message"></textarea>
-        <input type="hidden" name="_next" value="https://rajxxs.github.io/yourluckyadvisor/">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <div class="send_bt">
-            <button type="submit" style="
-                background-color: #f39c12; 
-                color: white; 
-                padding: 10px 20px; 
-                border: none; 
-                text-align: center; 
-                font-size: 16px; 
-                text-transform: uppercase; 
-                text-decoration: none; 
-                border-radius: 5px; 
-                cursor: pointer;
-                transition: background-color 0.3s ease;
-            ">Send</button>
-        </div>
-    </form>
-</div>
-    </div>
-            <div class="col-md-6 padding_0">
-              <div class="map-responsive">
-                <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&amp;q=Eiffel+Tower+Paris+France" width="600" height="400" frameborder="0" style="border:0; width: 100%;" allowfullscreen=""></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
+    </div>
+    <!--header section end -->
+
+
+    <!-- contact section start -->
+    <div class="contact_form_container">
+      <div class="contact_form">
+          <h2 class="what_taital">Contact Us</h2>
+          <form action="https://formsubmit.co/18a4014a8040233740e58a5f26805a74" method="POST">
+              <div class="form_group">
+                  <input type="text" placeholder="Name" name="name" required>
+              </div>
+              <div class="form_group">
+                  <input type="tel" placeholder="Phone Number" name="phone" required>
+              </div>
+              <div class="form_group">
+                  <input type="email" placeholder="Email" name="email" required>
+              </div>
+              <div class="form_group">
+                  <textarea placeholder="Message" rows="5" name="message" required></textarea>
+              </div>
+              <input type="hidden" name="_next" value="https://rajxxs.github.io/yourluckyadvisor/">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <div class="form_group">
+                  <button type="submit">Send</button>
+              </div>
+          </form>
+      </div>
+  </div>
+  
     <!-- contact section end -->
     <!--footer section start -->
     <div class="footer_section layout_padding margin_top_90">
@@ -166,7 +240,7 @@
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js/custom.js"></script>
     <!-- javascript --> 
-    <script src="js/owl.carousel.js"></script>
-    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script> 
+    <!-- <script src="js/owl.carousel.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>  -->
 </body>
 </html>
